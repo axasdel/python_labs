@@ -7,7 +7,7 @@ age = int(input('Возраст:'))
 new_age = age + 1
 print(f'Привет, {name}! Через год тебе будет {new_age}')
 ```
-!(https://github.com/axasdel/python_labs/blob/main/src/images/img01.png)
+![img01](https://github.com/axasdel/python_labs/blob/main/src/images/img01.png)
 
 *Задание 2*
 ```python
@@ -18,7 +18,7 @@ avg = str((summa / 2))
 if int(avg[3]) >= 5: avg = str(float(avg) + 0.01)
 print(f'sum={summa}, avg ={avg[:4]}')
 ```
-!(https://github.com/axasdel/python_labs/blob/main/src/images/img02.png)
+![img02](https://github.com/axasdel/python_labs/blob/main/src/images/img02.png)
 
 *Задание 3*
 ```python
@@ -32,7 +32,7 @@ print(f'База после скидки:{base}')
 print(f'НДС:{vat_amount}')
 print(f'Итого к оплате:{total}')
 ```
-!(https://github.com/axasdel/python_labs/blob/main/src/images/img03.png)
+![img03](https://github.com/axasdel/python_labs/blob/main/src/images/img03.png)
 
 *Задание 4*
 ```python
@@ -41,7 +41,7 @@ hours = min // 60
 minut = min % 60
 print(f'{hours}:{minut}')
 ```
-!(https://github.com/axasdel/python_labs/blob/main/src/images/img04.png)
+![img04](https://github.com/axasdel/python_labs/blob/main/src/images/img04.png)
 
 *Задание 5*
 ```python
@@ -54,4 +54,4 @@ for l in bio:
 print(f'Инициалы:{initials}.')
 print(f'Длина (символов):{dlina}')
 ```
-!(https://github.com/axasdel/python_labs/blob/main/src/images/img05.png)
+![img05](https://github.com/axasdel/python_labs/blob/main/src/images/img05.png)
