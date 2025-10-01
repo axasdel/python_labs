@@ -55,3 +55,9 @@ print(f'Инициалы:{initials}.')
 print(f'Длина (символов):{dlina + 2}')
 ```
 ![img05](https://github.com/axasdel/python_labs/blob/main/src/images/img05.png)
+
+
+
+**ЛАБОРАТОРНАЯ РАБОТА 2**
+
+*Задание 1*
