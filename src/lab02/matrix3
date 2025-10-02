@@ -1,15 +1,15 @@
-mat = [[1, 2], (3, 4, 5)]
-def check_pustota(mat):
+mat = [[1, 2, 3], [4, 5, 6]]
+
+def check_rvanost(mat):
+    dlina = len(mat[-1])
     for x in mat:
-        if len(x) != 0 and (type(x) == list or type(x) == tuple):
+        if len(x) == dlina:
             return True
         else:
             raise ValueError
-def flatten(mat):
-    if check_pustota(mat):
-        new_mat = []
-        for x in range(len(mat)):
-            for i in range(len(mat[-1])):
-                new_mat.append(mat[x][i])
-        print(new_mat)
-flatten(mat)
+def col_sums(mat):
+    if check_rvanost:
+        summa = []
+        summoch = [mat[x][y] + mat[x+1][y] for x in range(len(mat)) for y in range(len(mat[x]))]
+        print(summoch)
+col_sums(mat)
