@@ -55,3 +55,126 @@ print(f'Инициалы:{initials}.')
 print(f'Длина (символов):{dlina + 2}')
 ```
 ![img05](https://github.com/axasdel/python_labs/blob/main/src/images/img05.png)
+
+
+
+**ЛАБОРАТОРНАЯ РАБОТА 2**
+
+*Задание 1. Блок А*
+```python
+nums = [1, 3, 2, 3]
+def min_max(nums):
+    nums_tup = []
+    if len(nums) > 0:
+        mini = nums_tup.append(min(nums))
+        maxi = nums_tup.append(max(nums))
+        print(tuple(nums_tup))
+    else:
+        raise ValueError
+min_max(nums)
+```
+![img01](...)
+
+*Задание 2. Блок А*
+```python
+nums = []
+def unique_sorted(nums):
+    new_nums = sorted(set(nums))
+    print(new_nums)
+unique_sorted(nums)
+```
+![img02](...)
+
+*Задание 3. Блок А*
+```python
+mat = [[1, 2], [3, 4]]
+def flatten(mat):
+    new_mat = []
+    for num in mat:
+        if type(num) == tuple or type(num) == list:
+            for i in range(len(num)):
+                if num[i] != '':
+                    new_mat.append(num[i])
+        else:
+            raise ValueError
+    print(new_mat)
+flatten(mat)
+```
+[img03](...)
+
+*Задание 1. Блок Б*
+```python
+mat= [[1, 2], [3, 4]]
+
+def check_rvanost(mat):
+    dlina = len(mat[-1])
+    for x in mat:
+        if len(x) != dlina:
+            raise ValueError
+        else:
+            return True
+def transpose(mat):
+    if check_rvanost:
+        new_mat = []
+        for stolbec in range(len(mat[-1])):
+            new_row = []
+            for row in range(len(mat)):
+                new_row.append(mat[row][stolbec])
+            new_mat.append(new_row)
+    print(new_mat)
+transpose(mat)
+```
+![img04](...)
+
+*Задание 2. Блок Б*
+```python
+mat = [[1, 2], [3]]
+def check_rvanost(mat):
+    for i in range(len(mat)):
+        if len(mat[i]) == len(mat[i+1]):
+            return True
+        else:
+            return False
+def row_sums(mat):
+    new_mat = []
+    for x in mat:
+        if type(x) == list and check_rvanost(mat):
+            summa = 0
+            for i in range(len(x)):
+                summa += x[i]
+            new_mat.append(summa)
+        else:
+            raise ValueError
+    print(new_mat)
+row_sums(mat)
+```
+![img05](...)
+
+*Задание 3. Блок Б*
+```pyhon
+```
+![img06](...)
+
+*Задание 1. Блок С*
+```python
+mat = [[1, 2], [3]]
+def check_rvanost(mat):
+    for i in range(len(mat)):
+        if len(mat[i]) == len(mat[i+1]):
+            return True
+        else:
+            return False
+def row_sums(mat):
+    new_mat = []
+    for x in mat:
+        if type(x) == list and check_rvanost(mat):
+            summa = 0
+            for i in range(len(x)):
+                summa += x[i]
+            new_mat.append(summa)
+        else:
+            raise ValueError
+    print(new_mat)
+row_sums(mat)
+```
+![img07](...)

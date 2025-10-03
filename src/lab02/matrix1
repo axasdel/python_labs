@@ -8,7 +8,7 @@ def check_rvanost(mat):
         else:
             return True
 def transpose(mat):
-    if check_rvanost(mat):
+    if check_rvanost:
         new_mat = []
         for stolbec in range(len(mat[-1])):
             new_row = []

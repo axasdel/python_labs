@@ -10,6 +10,15 @@ def check_rvanost(mat):
 def col_sums(mat):
     if check_rvanost:
         summa = []
-        summoch = [mat[x][y] + mat[x+1][y] for x in range(len(mat)) for y in range(len(mat[x]))]
-        print(summoch)
+        count_row = 0
+        count_stolb = 0
+        for row in range(len(mat)):
+            count_row += 1
+            for stolb in range(len(mat[-1])):
+                count_stolb += 1
+                while count_row <= 2 and count_stolb < len(mat[-1]) - 1:
+                    summ = [mat[row][stolb] + mat[row + 1][stolb + 1]]
+                summa.append(summ)
+        print(summa)
+                
 col_sums(mat)
