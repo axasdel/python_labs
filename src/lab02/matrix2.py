@@ -1,4 +1,4 @@
-mat = [[1, 2], [3]]
+mat = [[1, 2], [3, 4]]
 def check_rvanost(mat):
     for i in range(len(mat)):
         if len(mat[i]) == len(mat[i+1]):
