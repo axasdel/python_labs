@@ -1,4 +1,4 @@
-mat = [[1, 2], [3, 4]]
+mat = [[1, 2], "ab"]
 def flatten(mat):
     new_mat = []
     for num in mat:

@@ -1,4 +1,4 @@
-nums = [1, 3, 2, 3]
+nums = []
 def min_max(nums):
     nums_tup = []
     if len(nums) > 0:
