@@ -1,6 +1,6 @@
 **ЛАБОРАТОРНАЯ РАБОТА 1**
 
-*Задание 1*
+*Задание 1. Блок А*
 ```python
 name  = input('Имя:')
 age = int(input('Возраст:'))
@@ -9,7 +9,7 @@ print(f'Привет, {name}! Через год тебе будет {new_age}')
 ```
 ![img01](https://github.com/axasdel/python_labs/blob/main/src/images/img01.png)
 
-*Задание 2*
+*Задание 2. Блок А*
 ```python
 a = float(input("a:").replace(',', '.'))
 b = float(input("b:").replace(',', '.'))
@@ -20,7 +20,7 @@ print(f'sum={summa}, avg ={avg[:4]}')
 ```
 ![img02](https://github.com/axasdel/python_labs/blob/main/src/images/img02.png)
 
-*Задание 3*
+*Задание 3. Блок А*
 ```python
 price = float(input('price:'))
 discount = float(input('discount:'))
@@ -34,7 +34,7 @@ print(f'Итого к оплате:{total}')
 ```
 ![img03](https://github.com/axasdel/python_labs/blob/main/src/images/img03.png)
 
-*Задание 4*
+*Задание 4. Блок А*
 ```python
 min = int(input('Минуты:'))
 hours = min // 60
@@ -43,7 +43,7 @@ print(f'{hours}:{minut}')
 ```
 ![img04](https://github.com/axasdel/python_labs/blob/main/src/images/img04.png)
 
-*Задание 5*
+*Задание 5. Блок А*
 ```python
 bio = input('ФИО:')
 fio = bio.split()
@@ -73,7 +73,9 @@ def min_max(nums):
         raise ValueError
 min_max(nums)
 ```
-![img01](...)
+![img01](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img01.png)
+![img11](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img11.png)
+![img12](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img12.png)
 
 *Задание 2. Блок А*
 ```python
@@ -83,7 +85,9 @@ def unique_sorted(nums):
     print(new_nums)
 unique_sorted(nums)
 ```
-![img02](...)
+![img02](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img02.png)
+![img21](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img21.png)
+![img22](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img22.png)
 
 *Задание 3. Блок А*
 ```python
@@ -100,7 +104,9 @@ def flatten(mat):
     print(new_mat)
 flatten(mat)
 ```
-[img03](...)
+![img03](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img03.png)
+![img31](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img31.png)
+![img32](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/img32.png)
 
 *Задание 1. Блок Б*
 ```python
@@ -124,7 +130,7 @@ def transpose(mat):
     print(new_mat)
 transpose(mat)
 ```
-![img04](...)
+![matrix1](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/matrix1.png)
 
 *Задание 2. Блок Б*
 ```python
@@ -148,12 +154,12 @@ def row_sums(mat):
     print(new_mat)
 row_sums(mat)
 ```
-![img05](...)
+![matrix2](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/matrix2.png)
 
 *Задание 3. Блок Б*
 ```pyhon
 ```
-![img06](...)
+![matrix3](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/matrix3.png)
 
 *Задание 1. Блок С*
 ```python
@@ -177,4 +183,4 @@ def row_sums(mat):
     print(new_mat)
 row_sums(mat)
 ```
-![img07](...)
+![tuples](https://github.com/axasdel/python_labs/blob/main/src/images/lab02/tuples.png)
