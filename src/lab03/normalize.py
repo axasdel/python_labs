@@ -1,5 +1,3 @@
-text = r'  двойные   пробелы  '
-
 def norm(text):
     return text.casefold()
 # print(norm(text))
@@ -29,5 +27,4 @@ def spacing(text):
 
 def normalize(text):
     text = spacing(yo2e(norm(text)))
-    print(text)
-normalize(text)
+    return text
