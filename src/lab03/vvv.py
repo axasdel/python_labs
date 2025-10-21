@@ -10,8 +10,9 @@ def count_freq(tokens):
 slovar = count_freq(tokens) #словарь
 print(slovar)
 
-def top_n(slovar):
-    res = []
+def top_n(slovar, n):
+    res = sorted([...])[::-1]
+    return res[:n]
     
 
-print(top_n(slovar))
+# print(top_n(slovar))
