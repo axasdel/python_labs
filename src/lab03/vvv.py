@@ -7,7 +7,7 @@ def count_freq(tokens):
         dict_token[token] = frequence
     return dict_token
 
-slovar = count_freq(tokens) #словарь
+slovar = count_freq(tokens) #тип - словарь
 print(slovar)
 
 def top_n(slovar, n):
