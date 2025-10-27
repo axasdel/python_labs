@@ -1,4 +1,3 @@
-from normalize_function import normalize
 import re # для использования "шаблонов"
 
 def tokenize(text):
