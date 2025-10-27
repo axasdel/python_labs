@@ -1,5 +1,6 @@
 import sys 
 import re
+text = sys.stdin.read().strip()
 
 def norm(text):
     return text.casefold()
@@ -26,7 +27,7 @@ def normalize(text):
     return text
 
 def tokenize(norm):
-    clear_text = re.sub(r'[^(\w+(\-\w+)*)]', ' ', norm) #заменяем все неугодное на пробелы в text
+    clear_text = re.sub(r'[^\w\s-]', ' ', norm) #заменяем все неугодное на пробелы в text
     new_text = clear_text.split() #разделяем по пробелу
     return new_text 
 
@@ -51,7 +52,6 @@ def top_n(slovar, n):
                 spisok[i], spisok[j] = spisok[j], spisok[i]
     return spisok[:n] #обрезаем список кортежей
 
-text = sys.stdin.read().strip()
 norm_f = normalize(text)
 tokens = tokenize(norm_f)
 slovar = count_freq(tokens) 
