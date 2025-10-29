@@ -1,14 +1,9 @@
-tokens = ["a","b","a","c","b","a"]
+# tokens = ["a","b","a","c","b","a"]
+from collections import Counter
 
-def count_freq(tokens):
-    dict_token = {}
-    for token in tokens:
-        frequence = tokens.count(token)
-        dict_token[token] = frequence
+def count_freq(tokens: list):
+    dict_token = Counter(tokens)
     return dict_token
-
-slovar = count_freq(tokens) #тип - словарь
-print(slovar)
 
 def top_n(slovar, n):
     spisok = []
@@ -23,5 +18,3 @@ def top_n(slovar, n):
             if spisok[i][1] < spisok[j][1]: #сравнение частоты
                 spisok[i], spisok[j] = spisok[j], spisok[i]
     return spisok[:n] #обрезаем список кортежей
-
-print(top_n(slovar, 2))

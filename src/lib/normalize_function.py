@@ -1,14 +1,10 @@
 import re
-def norm(text):
-    return text.casefold()
 
-def yo2e(text): #ё, Ё -> е, Е
-    while text.count('ё') >= 1 or text.count('Ё') >= 1:
-        text = text.replace('ё', 'е')
-        text = text.replace('Ё', 'Е')
-    return text
-
-def spacing(text):
+def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
+    if casefold:
+        text = text.casefold()
+    if yo2e:
+        text = text.replace('ё', 'е').replace('Ё', 'Е')
     symbols = ['t', 'r', 'n']
     for symb in symbols:
         comb = "\\" + symb
@@ -20,8 +16,4 @@ def spacing(text):
         except IndexError: #при выходе за границы
             break
     text = text.strip() #"схлопываем текст"
-    return text
-
-def normalize(text):
-    text = spacing(yo2e(norm(text)))
     return text
