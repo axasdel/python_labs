@@ -281,4 +281,4 @@ print(top)
 for slova in top:
     print(slova[0], ':', slova[1])
 ```
-![text_stats](https://github.com/axasdel/python_labs/blob/main/src/images/lab03/text_stats.png)
+![text_stats](https://github.com/axasdel/python_labs/blob/main/src/images/lab03/text_statss.png)
