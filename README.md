@@ -190,35 +190,31 @@ row_sums(mat)
 **ЛАБОРАТОРНАЯ РАБОТА 3**
 *Задание 1. Блок А*
 ```python
-def norm(text):
-    return text.casefold()
-
-def yo2e(text):
-    if text.count('ё') >= 1 or text.count('Ё') >= 1:
-        text = text.replace('ё', 'е')
-        text = text.replace('Ё', 'Е')
-    return text
-
-def spacing(text):
+def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
+    if casefold:
+        text = text.casefold()
+    if yo2e:
+        text = text.replace('ё', 'е').replace('Ё', 'Е')
     symbols = ['t', 'r', 'n']
     for symb in symbols:
         comb = "\\" + symb
-        if text.count(comb) >= 1:
-            text = text.replace(comb, ' ')
+        text = re.sub(rf'{comb}', ' ', text) #заменяем неподходящую комбинацию символов на пробел
     for s in range(len(text)):
-        try:
+        try: 
             if text[s] + text[s+1] == '  ':
                 text = text.replace('  ', ' ')
-        except:
-            pass
-    text = text.strip()
-    return text
-
-def normalize(text):
-    text = spacing(yo2e(norm(text)))
+        except IndexError: #при выходе за границы
+            break
+    text = text.strip() #"схлопываем текст"
     return text
 ```
 ![normalize1]()
 ![normalize2]()
 ![normalize3]()
 ![normalize4]()
+
+
+*Задание 1. Блок А.*
+```python
+
+```

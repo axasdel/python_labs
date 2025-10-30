@@ -4,10 +4,10 @@ from lib.normalize_function import normalize
 from lib.tokenize_function import tokenize
 from lib.count_freq_top_n_function import count_freq, top_n
 
-import io
-sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
-text = sys.stdin.read().strip()
-# text = 'мир, привет!!! привет!!'
+# import io
+# sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
+# text = sys.stdin.read().strip()
+text = 'мир, привет!!! привет!!'
 print(text)
 
 norm_f = normalize(text)

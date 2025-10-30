@@ -1,8 +1,7 @@
-# tokens = ["a","b","a","c","b","a"]
-from collections import Counter
+from collections import Counter 
 
 def count_freq(tokens: list):
-    dict_token = Counter(tokens)
+    dict_token = Counter(tokens) #используем класс counter, подсчитывающий сколько раз каждый элемент входит в массив
     return dict_token
 
 def top_n(slovar, n):
