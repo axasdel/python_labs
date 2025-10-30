@@ -7,7 +7,7 @@ age = int(input('Возраст:'))
 new_age = age + 1
 print(f'Привет, {name}! Через год тебе будет {new_age}')
 ```
-![img01](https://github.com/axasdel/python_labs/blob/main/src/images/img01.png)
+![img01](https://github.com/axasdel/python_labs/blob/main/src/images/lab01/img01.png)
 
 *Задание 2. Блок А*
 ```python
@@ -18,7 +18,7 @@ avg = str((summa / 2))
 if int(avg[3]) >= 5: avg = str(float(avg) + 0.01)
 print(f'sum={summa}, avg ={avg[:4]}')
 ```
-![img02](https://github.com/axasdel/python_labs/blob/main/src/images/img02.png)
+![img02](https://github.com/axasdel/python_labs/blob/main/src/images/lab01/img02.png)
 
 *Задание 3. Блок А*
 ```python
@@ -32,7 +32,7 @@ print(f'База после скидки:{base}')
 print(f'НДС:{vat_amount}')
 print(f'Итого к оплате:{total}')
 ```
-![img03](https://github.com/axasdel/python_labs/blob/main/src/images/img03.png)
+![img03](https://github.com/axasdel/python_labs/blob/main/src/images/lab01/img03.png)
 
 *Задание 4. Блок А*
 ```python
@@ -41,7 +41,7 @@ hours = min // 60
 minut = min % 60
 print(f'{hours}:{minut}')
 ```
-![img04](https://github.com/axasdel/python_labs/blob/main/src/images/img04.png)
+![img04](https://github.com/axasdel/python_labs/blob/main/src/images/lab01/img04.png)
 
 *Задание 5. Блок А*
 ```python
@@ -54,7 +54,7 @@ for l in fio:
 print(f'Инициалы:{initials}.')
 print(f'Длина (символов):{dlina + 2}')
 ```
-![img05](https://github.com/axasdel/python_labs/blob/main/src/images/img05.png)
+![img05](https://github.com/axasdel/python_labs/blob/main/src/images/lab01/img05.png)
 
 
 
@@ -255,7 +255,7 @@ def top_n(slovar, n):
 ![count_freq_top_n1](https://github.com/axasdel/python_labs/blob/main/src/images/lab03/count_freq_top_n1.png)
 ![count_freq_top_n2](https://github.com/axasdel/python_labs/blob/main/src/images/lab03/count_freq_top_n2.png)
 
-*Задание В*
+*Блок В*
 ```python
 import sys
 sys.path.append(r'C:\Users\user\Desktop\python_labs\src')
