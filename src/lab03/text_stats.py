@@ -13,7 +13,6 @@ print(text)
 norm_f = normalize(text)
 tokens = tokenize(norm_f)
 slovar = count_freq(tokens) #тип - словарь, используем его в ф-ции top_n
-slovar = count_freq(tokens) 
 top = top_n(slovar, 5)
 
 print("Всего слов:",len(tokens))

@@ -3,7 +3,7 @@ import csv
 
 def read_text(path, encoding ='utf-8'):
     path = Path(path) #класс предоставляет не только путь к файлу, но и возможность работы с ним
-    with open(path, 'r', encoding= 'utf-8') as f:
+    with open(path, 'r', encoding=encoding) as f:
         return f.read()
 
 try:
