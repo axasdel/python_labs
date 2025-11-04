@@ -13,24 +13,23 @@ def read_text(path, encoding = 'utf-8'):
     with open(path, 'r', encoding = 'utf-8') as f:
         return f.read()
 
-def report_writer(path, encoding = 'utf-8', header = None):
+def report_writer(path, count_f, encoding = 'utf-8'):
     path = Path(path)
     sortirovka = top_n(count_f, len(count_f))
     with open(path, 'w', newline = '', encoding='utf-8') as f:
         csv_maker = csv.writer(f, delimiter=',')
-        if header:
-            csv_maker.writerow(('word', 'count'))
+        csv_maker.writerow(('word', 'count'))
         for word, freq in sortirovka:
-            csv_maker.writerows((word, freq))
+            csv_maker.writerow((word, freq))
 
 try:
-    text_i = read_text('src/data/input.txt', encoding='utf-8')
+    text_i = read_text('src/data/lab04/input.txt', encoding='utf-8')
     norm = normalize(text_i)
     token = tokenize(norm)
     count_f = count_freq(token) 
     top = top_n(count_f, 5)
 
-    report_writer('src/lab04/data/report.csv', encoding = 'utf-8')
+    report_writer('src/data/lab04/report.csv',count_f, encoding = 'utf-8')
     print('Всего слов:', len(token))
     print('Уникальных слов:', len(count_f))
     for t in top:
