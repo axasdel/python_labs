@@ -1,4 +1,8 @@
-#ЛАБОРАТОРНАЯ РАБОТА 1#
+# ЛАБОРАТОРНЫЕ РАБОТЫ
+
+
+
+## ЛАБОРАТОРНАЯ РАБОТА 1
 
 *Задание 1. Блок А*
 ```python
@@ -58,7 +62,7 @@ print(f'Длина (символов):{dlina + 2}')
 
 
 
-#ЛАБОРАТОРНАЯ РАБОТА 2#
+## ЛАБОРАТОРНАЯ РАБОТА 2
 
 *Задание 1. Блок А*
 ```python
@@ -187,7 +191,7 @@ row_sums(mat)
 
 
 
-#ЛАБОРАТОРНАЯ РАБОТА 3#
+## ЛАБОРАТОРНАЯ РАБОТА 3
 
 *Задание 1. Блок А*
 ```python
@@ -285,7 +289,7 @@ for slova in top:
 
 
 
-#ЛАБОРАТОРНАЯ РАБОТА 4#
+## ЛАБОРАТОРНАЯ РАБОТА 4
 
 *Задание 1-2. Блок А*
 ```python
@@ -322,7 +326,7 @@ def write_csv(rows, path, header):
 
 write_csv([("word","count"),("test",3)], "src/data/check.csv", None)  # создаст CSV
 ```
-![io]()
+![io](https://github.com/axasdel/python_labs/blob/main/src/images/lab04/io_txt_csv.png)
 
 *Блок В*
 ```python
@@ -367,4 +371,4 @@ except FileNotFoundError:
 except UnicodeDecodeError:
     print('Неподходящая кодировка')
 ```
-![report]()
+![report](https://github.com/axasdel/python_labs/blob/main/src/images/lab04/text_report.png)
