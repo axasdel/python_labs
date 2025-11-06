@@ -1,4 +1,4 @@
-**ЛАБОРАТОРНАЯ РАБОТА 1**
+#ЛАБОРАТОРНАЯ РАБОТА 1#
 
 *Задание 1. Блок А*
 ```python
@@ -58,7 +58,7 @@ print(f'Длина (символов):{dlina + 2}')
 
 
 
-**ЛАБОРАТОРНАЯ РАБОТА 2**
+#ЛАБОРАТОРНАЯ РАБОТА 2#
 
 *Задание 1. Блок А*
 ```python
@@ -187,7 +187,7 @@ row_sums(mat)
 
 
 
-**ЛАБОРАТОРНАЯ РАБОТА 3**
+#ЛАБОРАТОРНАЯ РАБОТА 3#
 
 *Задание 1. Блок А*
 ```python
@@ -282,3 +282,89 @@ for slova in top:
     print(slova[0], ':', slova[1])
 ```
 ![text_stats](https://github.com/axasdel/python_labs/blob/main/src/images/lab03/text_statss.png)
+
+
+
+#ЛАБОРАТОРНАЯ РАБОТА 4#
+
+*Задание 1-2. Блок А*
+```python
+from pathlib import Path
+import csv
+
+def read_text(path, encoding ='utf-8'):
+    path = Path(path) #класс предоставляет не только путь к файлу, но и возможность работы с ним
+    with open(path, 'r', encoding=encoding) as f:
+        return f.read()
+
+try:
+    text = read_text('src/data/lab04/input.txt', encoding='utf-8')
+    print(text)
+except FileNotFoundError:
+    print('Файл не найден')
+except UnicodeDecodeError:
+    print('Неподходящая кодировка')
+
+
+def write_csv(rows, path, header):
+    path = Path(path)
+    if rows:
+        last_dlina = len(rows[-1])
+        for row in rows:
+            if len(row) != last_dlina:
+                raise ValueError
+    with open(path, 'w', newline = '', encoding = 'utf-8') as f:
+        csv_maker = csv.writer(f, delimiter=',')
+        if header:
+            csv_maker.writerow(header)
+        for row in rows:
+            csv_maker.writerow(row)
+
+write_csv([("word","count"),("test",3)], "src/data/check.csv", None)  # создаст CSV
+```
+![io]()
+
+*Блок В*
+```python
+from pathlib import Path
+import csv
+
+import sys
+sys.path.append(r'C:\Users\user\Desktop\python_labs\src')
+from lib.normalize_function import normalize
+from lib.tokenize_function import tokenize
+from lib.count_freq_top_n_function import count_freq, top_n
+
+
+def read_text(path, encoding = 'utf-8'):
+    path = Path(path)
+    with open(path, 'r', encoding = 'utf-8') as f:
+        return f.read()
+
+def report_writer(path, count_f, encoding = 'utf-8'):
+    path = Path(path)
+    sortirovka = top_n(count_f, len(count_f))
+    with open(path, 'w', newline = '', encoding='utf-8') as f:
+        csv_maker = csv.writer(f, delimiter=',')
+        csv_maker.writerow(('word', 'count'))
+        for word, freq in sortirovka:
+            csv_maker.writerow((word, freq))
+
+try:
+    text_i = read_text('src/data/lab04/input.txt', encoding='utf-8')
+    norm = normalize(text_i)
+    token = tokenize(norm)
+    count_f = count_freq(token) 
+    top = top_n(count_f, 5)
+
+    report_writer('src/data/lab04/report.csv',count_f, encoding = 'utf-8')
+    print('Всего слов:', len(token))
+    print('Уникальных слов:', len(count_f))
+    for t in top:
+        print(t[0], ':', t[1])
+except FileNotFoundError:
+    print('Файл не найден')
+except UnicodeDecodeError:
+    print('Неподходящая кодировка')
+```
+![report]()
