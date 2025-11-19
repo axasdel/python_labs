@@ -56,7 +56,7 @@ def main():
                 norm_f = normalize(text)
                 tokens = tokenize(norm_f)
                 slovar = count_freq(tokens)  # тип - словарь, используем его в ф-ции top_n
-                top = top_n(slovar, args.n)
+                top = top_n(slovar, args.top)
 
                 print("Всего слов:", len(tokens))
                 print("Уникальных слов:", len(slovar))
