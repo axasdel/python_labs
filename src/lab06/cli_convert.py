@@ -38,15 +38,6 @@ def csv2xlsx(csv_path_1, xlsx_path_2):
     workbook.save(xlsx_newpath)
 
 
-import sys
-
-sys.path.append(r"C:\Users\user\Desktop\python_labs\src")
-import json
-import csv
-
-from pathlib import Path
-
-
 def json2csv(json_path, csv_path):
     json_newpath = Path(json_path)
     csv_newpath = Path(csv_path)

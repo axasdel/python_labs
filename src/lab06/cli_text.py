@@ -9,14 +9,17 @@ from lib.tokenize_function import tokenize
 from lib.count_freq_top_n_function import count_freq, top_n
 
 
-def cat_read_text(path):
+def cat_read_text(path, numeration = 0):
     new_path = Path(path)
     if not new_path.exists():
         raise FileNotFoundError('Файл не найден')
 
     with open(new_path, 'r', encoding='utf-8') as f:
-        for num, row in enumerate(f, 1):
-            print(f'{num}: {row}')
+        if numeration:
+            for num, row in enumerate(f, 1):
+                print(f'{num}: {row}')
+        else:
+            print(f.read())
 
 
 
@@ -41,7 +44,7 @@ def main():
 
     if args.command == 'cat':
         try:
-            cat_read_text(args.input)
+            cat_read_text(args.input, args.n)
         except Exception as e:
             parser.error('Ошибка в подкоманде cat')
 
@@ -53,7 +56,7 @@ def main():
                 norm_f = normalize(text)
                 tokens = tokenize(norm_f)
                 slovar = count_freq(tokens)  # тип - словарь, используем его в ф-ции top_n
-                top = top_n(slovar, 5)
+                top = top_n(slovar, args.n)
 
                 print("Всего слов:", len(tokens))
                 print("Уникальных слов:", len(slovar))
