@@ -23,9 +23,9 @@ def cat_read_text(path, numeration = 0):
 
 
 
-def main():
-    parser = argparse.ArgumentParser(description='CLI для работы с текстом')
-    subparsers = parser.add_subparsers(dest='command')
+def main(): #основная функция
+    parser = argparse.ArgumentParser(description='CLI для работы с текстом') #создание объекта, для присваивания ему аргументов 
+    subparsers = parser.add_subparsers(dest='command') #"контейнер" для подкоманд
 
 
     #подкоманда cat
@@ -36,19 +36,19 @@ def main():
     #подкоманда stats
     stats_parser = subparsers.add_parser('stats', help = 'Частота слов')
     stats_parser.add_argument('--input', required=True)
-    stats_parser.add_argument('--top', type=int, default=5)
+    stats_parser.add_argument('--top', type=int, default=5) #если пользователь не укажет значение, то оно автоматом будет 5
 
 
     args = parser.parse_args()
 
 
-    if args.command == 'cat':
+    if args.command == 'cat': #если подкоманда cat
         try:
             cat_read_text(args.input, args.n)
         except Exception as e:
             parser.error('Ошибка в подкоманде cat')
 
-    if args.command == 'stats':
+    if args.command == 'stats': #если подкоманда stats
         try:
             with open(args.input, 'r', encoding='utf-8') as f:
                 text = f.read()

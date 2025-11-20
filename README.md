@@ -444,7 +444,8 @@ json_outpath = "src/lab05/data/result/people_from_csv.json"
 json_to_csv(json_path, csv_outpath)
 csv_to_json(csv_path, json_outpath)
 ```
-![json_csv]()
+![json_csv](https://github.com/axasdel/python_labs/blob/main/src/images/lab05/json_csv.png)
+![csv_json](https://github.com/axasdel/python_labs/blob/main/src/images/lab05/csv_json.png)
 
 *Задание 2. Реализация CSV -> XLSX*
 ```python
@@ -500,4 +501,10 @@ if __name__ == "__main__":  # запуск напрямую
     xlsx_path = "src/lab05/data/result/res_people.xlsx"
     csv_to_xlsx(csv_path, xlsx_path)
 ```
-![csv_xlsx]()
+![csv_xlsx](https://github.com/axasdel/python_labs/blob/main/src/images/lab05/csv_xlsx.png)
+
+
+
+## ЛАБОРАТОРНАЯ РАБОТА 6
+
+*Задание 1. *
