@@ -714,6 +714,4 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-![json_csv]()
-![csv_josn]()
-![csv_xlsx]()
+![out_files](https://github.com/axasdel/python_labs/blob/main/src/images/lab06/out_files.png)
