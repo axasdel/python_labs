@@ -23,10 +23,14 @@ def json_to_csv(json_path, csv_path):
         raise ValueError("Файл пуст")
     if type(json_text) != list:
         raise ValueError("JSON не список")
-    if not all(isinstance(element, dict) for element in json_text):  # все ли элементы - словари
+    if not all(
+        isinstance(element, dict) for element in json_text
+    ):  # все ли элементы - словари
         raise ValueError("JSON - список словарей")
 
-    fieldnames = list(json_text[0].keys())  # преобразование ключей 1ого словаря в заголовок для будующего csv
+    fieldnames = list(
+        json_text[0].keys()
+    )  # преобразование ключей 1ого словаря в заголовок для будующего csv
     with csv_newpath.open("w", encoding="utf-8", newline="") as cf:
         csv_writer = csv.DictWriter(cf, fieldnames=fieldnames, extrasaction="ignore")
         csv_writer.writeheader()  # игнорирование лишних ключей

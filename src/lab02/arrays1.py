@@ -1,4 +1,6 @@
 nums = []
+
+
 def min_max(nums):
     nums_tup = []
     if len(nums) > 0:
@@ -7,4 +9,6 @@ def min_max(nums):
         print(tuple(nums_tup))
     else:
         raise ValueError
+
+
 min_max(nums)

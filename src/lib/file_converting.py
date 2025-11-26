@@ -66,4 +66,3 @@ json_outpath = "src/lab05/data/result/people_from_csv.json"
 
 json_to_csv(json_path, csv_outpath)
 csv_to_json(csv_path, json_outpath)
-

@@ -1,4 +1,5 @@
-mat= [[1, 2], [3, 4]]
+mat = [[1, 2], [3, 4]]
+
 
 def check_rvanost(mat):
     dlina = len(mat[-1])
@@ -7,6 +8,8 @@ def check_rvanost(mat):
             raise ValueError
         else:
             return True
+
+
 def transpose(mat):
     if check_rvanost:
         new_mat = []
@@ -16,4 +19,6 @@ def transpose(mat):
                 new_row.append(mat[row][stolbec])
             new_mat.append(new_row)
     print(new_mat)
+
+
 transpose(mat)

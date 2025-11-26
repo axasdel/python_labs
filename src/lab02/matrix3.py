@@ -10,5 +10,7 @@ def col_sums(matrix):
     except:
         raise ValueError
     return result
+
+
 matrix = [[1, 2, 3], [4, 5, 6]]
 print(col_sums(matrix))
