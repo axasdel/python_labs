@@ -4,7 +4,7 @@ def count_freq(tokens: list):
     dict_token = Counter(tokens) #используем класс counter, подсчитывающий сколько раз каждый элемент входит в массив
     return dict_token
 
-def top_n(slovar, n):
+def top_n(slovar, n=5):
     spisok = []
     for key, value in slovar.items():
         spisok.append((key, value)) #делаем список из кортежей, в кот. помещены ключ и значение 
