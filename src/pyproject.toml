@@ -11,12 +11,13 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "black>=24.0",
+   "pytest>=9.0.1"
 ]
 
 
 [tool.black]
 line-length = 88
-target-version = ["py311"]
+target-version = ["py313"]
 extend-exclude = '''
 (
   ^\.(venv|env)/|
@@ -24,6 +25,4 @@ extend-exclude = '''
   ^images/
 )
 
-
-[tool.uv.sources]
-"ython_labs" = { path = "src" }
+'''
