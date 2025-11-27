@@ -65,6 +65,8 @@ def test_top_n(source, n, expected):
 1) Используя pytest.mark.parametrize (параметризацию) прописываем то, что мы будем использовать для теста функций
 2) После пишем функцию, которую хотим протестировать, чтобы она "прогнала" тесты
 
+![result](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_text.png)
+
 
 ## Тесты для json_csv.py
 ```python
@@ -136,3 +138,4 @@ def test_csv_to_json(sample_csv, tmp_path):
 ***План выполнения**:
 1) Используем фикстуры (функции, которые pytest вызывает до теста для подготовки)
 2) Далее также тестируем функции, используя ранее созданные фикстуры
+![result2](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_json_csv.png)
