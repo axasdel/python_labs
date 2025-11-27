@@ -135,7 +135,7 @@ def test_csv_to_json(sample_csv, tmp_path):
         assert json_reader[0]["age"] == "25"
         assert json_reader[0]["city"] == "Moscow"
 ```
-***План выполнения**:
+**План выполнения**:
 1) Используем фикстуры (функции, которые pytest вызывает до теста для подготовки)
 2) Далее также тестируем функции, используя ранее созданные фикстуры
 ![result2](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_json_csv.png)
