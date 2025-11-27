@@ -1,0 +1,29 @@
+[project]
+name = "python_labs"
+version = "0.1.0"
+description = "Проект с лабораторными работами по ПиА"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openpyxl>=3.1.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.0",
+]
+
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+extend-exclude = '''
+(
+  ^\.(venv|env)/|
+  ^data/|
+  ^images/
+)
+
+
+[tool.uv.sources]
+"ython_labs" = { path = "src" }
