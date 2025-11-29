@@ -1,6 +1,6 @@
 # ЛАБОРАТОРНАЯ РАБОТА № 7
 
-## Теты для text.py
+## Тесты для text.py
 ```python
 import pytest
 from src.lib.text import normalize, tokenize, count_freq, top_n
