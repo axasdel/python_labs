@@ -779,7 +779,7 @@ def test_count_freq(source, expected):
 def test_top_n(source, n, expected):
     assert top_n(source, n) == expected
 ```
-1[res](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_text.png)
+![res](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_text.png)
 
 
 ```python
@@ -848,4 +848,4 @@ def test_csv_to_json(sample_csv, tmp_path):
         assert json_reader[0]["age"] == "25"
         assert json_reader[0]["city"] == "Moscow"
 ```
-![res2]((https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_json_csv.png)
+![res2](https://github.com/axasdel/python_labs/blob/main/src/images/lab07/res_test_json_csv.png)
