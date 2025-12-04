@@ -1,3 +1,7 @@
+# ЛАБОРАТОРНАЯ РАБОА №8
+
+## КЛАСС STUDENT
+```python
 from dataclasses import dataclass
 from datetime import datetime, date
 import re
@@ -11,11 +15,11 @@ class Student:
     gpa: float
 
     def __post_init__(self):
-        date_example = r'^\d{4}-\d{2}-\d{2}$' #проверка по структуре (регулярка)
+        date_example = r'^\d{4}-\d{2}-\d{2}$'
         if not re.match(date_example, self.birthdate):
             raise ValueError("Check your birthdate format. It might contain some mistakes")
         try:
-            datetime.strptime(self.birthdate, "%Y-%m-%d") #проверка через datetime
+            datetime.strptime(self.birthdate, "%Y-%m-%d")
         except ValueError as e:
             raise ValueError("Check your birthday format. It might be invalid")
 
@@ -28,13 +32,13 @@ class Student:
 
         age = today.year - bd.year
 
-        if (today.month, today.day) < (bd.month, bd.day): #если в этом году мсяц рождения не наступил
+        if (today.month, today.day) < (bd.month, bd.day):
             age -= 1
 
         return age
     
 
-    def to_dict(self): #метод экземпляра. сериализация (атрибуты обьекта -> словарь)
+    def to_dict(self):
         return {
             "fio": self.fio,
             "birthdate": self.birthdate,
@@ -44,7 +48,7 @@ class Student:
 
 
     @classmethod
-    def from_dict(cls, d: dict): #метод класса. десериализация (содержимое словарей -> "соедржимое" класса)
+    def from_dict(cls, d: dict):
         return cls(
             fio = d["fio"],
             birthdate = d["birthdate"],
@@ -53,18 +57,27 @@ class Student:
         )
     
 
-    def __str__(self): #строковое представление
+    def __str__(self):
         return f"Студент: {self.fio}\nВозраст: {self.age()}\nГруппа: {self.group}\nGPA: {self.gpa}"
+```
+
+## СЕРИАЛИЗАЦИЯ / ДЕСЕРИАЛИЗАЦИЯ
+```pyhton
+import json
+from src.lab08.models import Student
 
 
-if __name__ == "__main__": #запуск напрямую из файла, при импорте не отображается
-    student = Student(
-        fio="Иванов Иван Иваныч",
-        birthdate="2009-01-18",
-        group="БИВТ-25-4",
-        gpa=5
-    )
-    print("Студентик:")
-    print(student)
+def students_to_json(students, path): #сериализация
+    students = [student.to_dict() for student in students]
+
+    with open(path, 'w', encoding='utf-8') as jf:
+        json.dump(students, jf, ensure_ascii=False, indent=2)
 
 
+def students_from_json(path): #десериализация
+    with open(path, 'r', encoding='utf-8') as jf:
+        students_d = json.load(jf)
+    
+    dict_to_student = [Student.from_dict(dictionary) for dictionary in students_d]
+    return dict_to_student
+```
