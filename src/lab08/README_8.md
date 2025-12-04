@@ -60,6 +60,8 @@ class Student:
     def __str__(self):
         return f"Студент: {self.fio}\nВозраст: {self.age()}\nГруппа: {self.group}\nGPA: {self.gpa}"
 ```
+![example](https://github.com/axasdel/python_labs/blob/main/src/images/lab08/ex_student.png)
+
 
 ## СЕРИАЛИЗАЦИЯ / ДЕСЕРИАЛИЗАЦИЯ
 ```pyhton
