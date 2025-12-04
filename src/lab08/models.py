@@ -11,7 +11,7 @@ class Student:
     gpa: float
 
     def __post_init__(self):
-        date_example = r'^\d{4}-\d{2}-\d{2}'
+        date_example = r'^\d{4}-\d{2}-\d{2}$'
         if not re.match(date_example, self.birthdate):
             raise ValueError("Check your birthdate format. It might contain some mistakes")
         try:
@@ -19,8 +19,8 @@ class Student:
         except ValueError as e:
             raise ValueError("Check your birthday format. It might be invalid")
 
-        if not (0 <= self.gpa <= 10):
-            raise ValueError("GPA must be between 0 and 10")
+        if not (0 <= self.gpa <= 5):
+            raise ValueError("GPA must be between 0 and 5")
 
     def age(self):
         bd = datetime.strptime(self.birthdate, "%Y-%m-%d").date()
@@ -55,17 +55,16 @@ class Student:
 
     def __str__(self):
         return f"Студент: {self.fio}\nВозраст: {self.age()}\nГруппа: {self.group}\nGPA: {self.gpa}"
-    
 
 
 if __name__ == "__main__":
     student = Student(
-        fio="Иванов Иван Иванович",
+        fio="",
         birthdate="2000-05-15",
         group="SE-01",
         gpa=4.5
     )
     print("Создание студента:")
     print(student)
-    
+
 
