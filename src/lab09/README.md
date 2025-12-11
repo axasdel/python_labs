@@ -126,3 +126,4 @@ class Group:
 ```
 *fileds* - передача произвольного количества полей для обновления. внутри метода update работаем с fields как со словарем.
 ***Тесты:**
+[!tests](https://github.com/axasdel/python_labs/blob/main/src/images/lab09/tests_group.png)
