@@ -113,4 +113,3 @@ def test_remove(group):
 
     assert len(students) == len(STUDENTS) - 1
     assert all(s.fio != target["fio"] for s in students)
-
